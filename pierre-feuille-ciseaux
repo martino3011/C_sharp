@@ -1,0 +1,56 @@
+using System;
+
+namespace Pierre_Feuille_Ciseaux
+{
+    class Program
+    {
+        
+
+        static void Main(string[] args)
+        {
+            
+            int a = 0; int b = 0;
+
+            Console.WriteLine("pierre feuille ciseaux");
+            Console.WriteLine("Pierre (1)");
+            Console.WriteLine("Feuille (2)");
+            Console.WriteLine("Ciseaux (3)");
+            Console.WriteLine("Enter a number:");
+            
+
+           
+
+            a = Convert.ToInt32(Console.ReadLine());
+
+            Random rnd = new Random();
+            b = rnd.Next(1, 4);
+            int v = a - b;
+
+            if (v == 0)
+            {
+                Console.WriteLine("It's a draw");
+            }
+            if (v == -2)
+            {
+                Console.WriteLine("GG! You win!");
+            }
+            if (v == -1)
+            {
+                Console.WriteLine("You lose :(");
+            }
+            if (v == 1)
+            {
+                Console.WriteLine("GG! You win!");
+            }
+            if (v == 2)
+            {
+                Console.WriteLine("You lose :(");
+                
+            }
+            Console.Write("Press any key to close the game");
+            Console.ReadKey();
+
+            //Bon il est un peu lourd mais il marche ^^
+        }
+    }
+}
